@@ -84,14 +84,14 @@
           </div>
       
           <div class="hero-image">
-            <img
-              src="assets/profile.png"
-              alt="Rodney Monasque"
-              class="profile-photo"
-            >
+            <div class="profile-frame">
+              <img
+                src="assets/profile.png"
+                alt="Rodney Monasque"
+                class="profile-photo"
+              >
+            </div>
           </div>
-      
-        </div>
       
       </section>
 
@@ -103,15 +103,14 @@
             <span class="section-label">ABOUT ME</span>
       
             <h2>
-              Building Practical Digital Skills
-              Through Hands-On Experience
-            </h2>
+                Building Practical Digital Skills Through Hands-On
+                <span class="about-highlight">Experience</span>
+              </h2>
       
             <p>
-              I am a Computer Engineering student with hands-on GoHighLevel
-              experience gained during my completed OJT with the Kevin Spann
-              Mentorship Value Program. I worked on websites, coaching funnels,
-              CRM setup, workflows, forms, calendars, and email campaigns.
+              I am a Computer Engineering student building practical experience across web development, automation,
+              networking, electronics, and hardware projects. My OJT gave me hands-on exposure to GoHighLevel and
+              client-facing digital work, while my academic projects continue to strengthen my technical foundation.
             </p>
       
             <p>
@@ -194,9 +193,9 @@
             <span class="section-label">SKILLS & TOOLS</span>
       
             <h2>
-              Tools and Skills I Used
-              During My OJT
-            </h2>
+                Tools and Skills I Used During
+                <span class="skills-highlight">My OJT</span>
+              </h2>
       
             <p>
               My hands-on experience focused on GoHighLevel website building,
@@ -458,7 +457,9 @@
 
         <span class="section-label">PROJECTS</span>
       
-        <h2>Projects I Worked On</h2>
+        <h2>
+            Projects I <span class="projects-highlight">Worked On</span>
+          </h2>
       
         <p class="projects-intro">
           A selection of professional OJT projects and academic Computer Engineering
@@ -609,7 +610,9 @@
 
         <span class="section-label">CONTACT</span>
       
-        <h2>Let’s Connect</h2>
+        <h2>
+            Let’s <span class="contact-highlight">Connect</span>
+          </h2>
       
         <p class="contact-intro">
           I’m open to entry-level opportunities and projects related to web development,
@@ -663,9 +666,9 @@
       
         </div>
       
-        <a href="mailto:YOUR-EMAIL-HERE" class="contact-btn">
-          Send Me an Email →
-        </a>
+        <button class="contact-btn" onclick="openContactForm()">
+            Send Me an Email →
+          </button>
       
       </section>
   </main>
@@ -755,8 +758,91 @@
       </div>
   
   </footer>
+<!-- CONTACT FORM MODAL -->
+<div
+  id="contactModal"
+  class="contact-modal"
+  onclick="closeContactForm()"
+>
 
+  <div
+    class="contact-modal-box"
+    onclick="event.stopPropagation()"
+  >
+
+    <button
+      class="contact-modal-close"
+      onclick="closeContactForm()"
+    >
+      ×
+    </button>
+
+    <span class="section-label">QUICK MESSAGE</span>
+
+    <h3>Send Me a Message</h3>
+
+    <p class="form-success-message">
+        Message sent successfully! I'll get back to you as soon as I can.
+      </p>
+
+    <form
+  id="contact-form"
+  class="quick-message-form"
+>
+
+      <div class="form-group">
+        <label for="contactName">Name</label>
+        <input
+          type="text"
+          id="contactName"
+          name="name"
+          placeholder="Your name"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="contactEmail">Email</label>
+        <input
+          type="email"
+          id="contactEmail"
+          name="email"
+          placeholder="Your email"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="contactMessage">Message</label>
+        <textarea
+          id="contactMessage"
+          name="message"
+          rows="6"
+          placeholder="Write your message..."
+          required
+        ></textarea>
+      </div>
+
+      <button
+      type="submit"
+      class="message-submit-btn"
+    >
+      Send Message →
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+  
   <script src="script.js"></script>
+  <form
+  id="contact-form"
+  class="quick-message-form"
+  action="https://formspree.io/f/maewoyaj"
+  method="POST"
+>
   
   </body>
   </html>
